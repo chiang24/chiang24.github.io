@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-02-26T12:03:10.443Z</updated>
+  <updated>2017-02-26T12:07:51.143Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2017/02/26/%E6%8B%A5%E6%8A%B1%E5%91%BD%E4%BB%A4%E8%A1%8C/"/>
     <id>http://yoursite.com/2017/02/26/拥抱命令行/</id>
     <published>2017-02-26T12:00:24.025Z</published>
-    <updated>2017-02-26T12:03:10.443Z</updated>
+    <updated>2017-02-26T12:07:51.143Z</updated>
     
     <content type="html"><![CDATA[<p>由于我是windows操作系统，所以我用git bash来写命令。bash是一个命令处理器，用户可以在上面直接输入命令来执行各种任务。了解<a href="https://zh.wikipedia.org/wiki/bash" target="_blank" rel="external">[bash]</a>是什么之前先需要了解<a href="https://zh.wikipedia.org/wiki/Unix_shell" target="_blank" rel="external">[Unix shell]</a></p>
 <p><img src="http://upload-images.jianshu.io/upload_images/4740192-c8393ee9706f70bd.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="git bash 界面.PNG">    </p>
