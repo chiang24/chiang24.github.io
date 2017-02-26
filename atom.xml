@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-02-26T12:14:51.646Z</updated>
+  <updated>2017-02-26T12:17:55.632Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2017/02/26/%E6%8B%A5%E6%8A%B1%E5%91%BD%E4%BB%A4%E8%A1%8C/"/>
     <id>http://yoursite.com/2017/02/26/拥抱命令行/</id>
     <published>2017-02-26T12:14:51.639Z</published>
-    <updated>2017-02-26T12:14:51.646Z</updated>
+    <updated>2017-02-26T12:17:55.632Z</updated>
     
     <content type="html"><![CDATA[<p>由于我是windows操作系统，所以我用git bash来写命令。bash是一个命令处理器，用户可以在上面直接输入命令来执行各种任务。了解<a href="https://zh.wikipedia.org/wiki/bash" target="_blank" rel="external">[bash]</a>是什么之前先需要了解<a href="https://zh.wikipedia.org/wiki/Unix_shell" target="_blank" rel="external">[Unix shell]</a></p>
 <p><img src="http://upload-images.jianshu.io/upload_images/4740192-c8393ee9706f70bd.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="git bash 界面.PNG"></p>
@@ -39,7 +39,8 @@
 <h3 id="命令的格式"><a href="#命令的格式" class="headerlink" title="命令的格式"></a>命令的格式</h3><hr>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ 命令 -选项缩写 -选项 参数</div><div class="line">结果</div></pre></td></tr></table></figure>
 <p><code>命令缩写的规则是省略A、E、I、O、U五个元音字母，留下两到三个字母（有时例外）</code></p>
-<h2 id="目录与文件的基本操作"><a href="#目录与文件的基本操作" class="headerlink" title="###目录与文件的基本操作"></a>###目录与文件的基本操作</h2><ol>
+<h3 id="目录与文件的基本操作"><a href="#目录与文件的基本操作" class="headerlink" title="目录与文件的基本操作"></a>目录与文件的基本操作</h3><hr>
+<ol>
 <li>创建目录<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">mkdir xxx(目录名）</div><div class="line">mkdir -p xxx（目录路径）   --一次性创建多层次目录，有需要加</div></pre></td></tr></table></figure>
 </li>
 </ol>
@@ -69,13 +70,17 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cd xxx(路径)</div></pre></td></tr></table></figure>
 </li>
 </ul>
-<h2 id="其它常用命令"><a href="#其它常用命令" class="headerlink" title="###其它常用命令"></a>###其它常用命令</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">clear   --清屏</div><div class="line">curl -l xxx   -- 访问url  ”-l“代表跟着跳转到页面，有需要加</div><div class="line">star   --用GUI(图形界面)打开某个文件</div></pre></td></tr></table></figure>
-<h2 id="使用技巧"><a href="#使用技巧" class="headerlink" title="###使用技巧"></a>###使用技巧</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">!!    --使用上一次命令</div><div class="line">xxx; yyy    --一句话执行两个命令</div><div class="line">xxx&amp;&amp; yyy  --同上</div></pre></td></tr></table></figure>
-<h2 id="更多命令"><a href="#更多命令" class="headerlink" title="###更多命令"></a>###更多命令</h2><ul>
+<h3 id="其它常用命令"><a href="#其它常用命令" class="headerlink" title="其它常用命令"></a>其它常用命令</h3><hr>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">clear   --清屏</div><div class="line">curl -l xxx   -- 访问url  ”-l“代表跟着跳转到页面，有需要加</div><div class="line">star   --用GUI(图形界面)打开某个文件</div></pre></td></tr></table></figure>
+<h3 id="使用技巧"><a href="#使用技巧" class="headerlink" title="使用技巧"></a>使用技巧</h3><hr>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">!!    --使用上一次命令</div><div class="line">xxx; yyy    --一句话执行两个命令</div><div class="line">xxx&amp;&amp; yyy  --同上</div></pre></td></tr></table></figure>
+<h3 id="更多命令"><a href="#更多命令" class="headerlink" title="更多命令"></a>更多命令</h3><hr>
+<ul>
 <li>在mac里：<code>man ls</code></li>
 <li>在windows里：<code>ls --help</code></li>
 </ul>
-<h2 id="注意事项"><a href="#注意事项" class="headerlink" title="###注意事项"></a>###注意事项</h2><p>1.不要漏打任何一个字符，包括空格<br>2.windows用户最好在~目录下玩儿<br>3.熟能生巧<br>4.作者是一个命令行初学者，以上如果有不正确的地方，欢迎留言纠错。</p>
+<h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><hr>
+<p>1.不要漏打任何一个字符，包括空格<br>2.windows用户最好在~目录下玩儿<br>3.熟能生巧s<br>4.作者是一个命令行初学者，以上如果有不正确的地方，欢迎留言纠错。</p>
 ]]></content>
     
     <summary type="html">
