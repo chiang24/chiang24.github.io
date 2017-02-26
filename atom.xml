@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-02-26T11:57:27.884Z</updated>
+  <updated>2017-02-26T12:03:10.443Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,77 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>拥抱命令行</title>
+    <link href="http://yoursite.com/2017/02/26/%E6%8B%A5%E6%8A%B1%E5%91%BD%E4%BB%A4%E8%A1%8C/"/>
+    <id>http://yoursite.com/2017/02/26/拥抱命令行/</id>
+    <published>2017-02-26T12:00:24.025Z</published>
+    <updated>2017-02-26T12:03:10.443Z</updated>
+    
+    <content type="html"><![CDATA[<p>由于我是windows操作系统，所以我用git bash来写命令。bash是一个命令处理器，用户可以在上面直接输入命令来执行各种任务。了解<a href="https://zh.wikipedia.org/wiki/bash" target="_blank" rel="external">[bash]</a>是什么之前先需要了解<a href="https://zh.wikipedia.org/wiki/Unix_shell" target="_blank" rel="external">[Unix shell]</a></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/4740192-c8393ee9706f70bd.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="git bash 界面.PNG">    </p>
+<h2 id="了解基本概念"><a href="#了解基本概念" class="headerlink" title="###了解基本概念"></a>###了解基本概念</h2><ul>
+<li><code>/</code> 代表整个硬盘，叫根目录(<em>这是 Windows 特有的</em>)</li>
+<li><code>~</code> 用户目录<br>  -在windows系统中，表示<code>/Users/administrator/</code>目录<br>  -在 Linux 系统，表示 <code>/home/administrator/</code> 目录 </li>
+<li><code>./</code>代表当前目录</li>
+<li><code>..</code>代表父目录(上一级目录)   </li>
+<li>目录、路径、节点<br> 1.目录就是文件夹<br> 2.路径</li>
+<li>绝对路径，以/开头，详细的描述了一个文件具体的位置。例如：<code>/c/Users/demos</code></li>
+<li><p>相对路径，不以/开头，是一个相对值。 例如：<code>..C/users</code></p>
+<p>3.节点=文件 or 目录</p>
+</li>
+</ul>
+<h3 id="命令的格式"><a href="#命令的格式" class="headerlink" title="命令的格式"></a>命令的格式</h3><hr>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ 命令 -选项缩写 -选项 参数</div><div class="line">结果</div></pre></td></tr></table></figure>
+<p><code>命令缩写的规则是省略A、E、I、O、U五个元音字母，留下两到三个字母（有时例外）</code></p>
+<h2 id="目录与文件的基本操作"><a href="#目录与文件的基本操作" class="headerlink" title="###目录与文件的基本操作"></a>###目录与文件的基本操作</h2><ol>
+<li>创建目录<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">mkdir xxx(目录名）</div><div class="line">mkdir -p xxx（目录路径）   --一次性创建多层次目录，有需要加</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<ul>
+<li><p>创建文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">touch xxx    --文件名</div></pre></td></tr></table></figure>
+</li>
+<li><p>删除</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">rm -r    --递归删除，将指定目录下的所有文件与子目录一并处理</div><div class="line">rm -f   --强制删除</div><div class="line">rm -rf   --强制逐个删除一个目录</div><div class="line">rm -i    --删除已有目录前先询问用户</div></pre></td></tr></table></figure>
+</li>
+<li><p>移动/重命名</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">mv 源 目标  --格式</div><div class="line">mv demos/helloworld ./   --把demos里的helloworld移动到当前目录</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><code>如果当前目录无目标文件则执行重命名，反之，执行移动。</code></p>
+<ul>
+<li><p>显示当前目录下的文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">ls -l   --用长一点的形式显示</div><div class="line">ls -a   --显示所有文件</div><div class="line">ls -la   --用长一点的形式显示所有文件</div></pre></td></tr></table></figure>
+</li>
+<li><p>拷贝</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cp xxx(文件) xxx（路径）  --这种只拷贝单个文件</div><div class="line">cp -r    --递归拷贝文件夹，包括下一级的子文件夹以此类推</div></pre></td></tr></table></figure>
+</li>
+<li><p>查看当前位置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pwd</div></pre></td></tr></table></figure>
+</li>
+<li><p>进入目录</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cd xxx(路径)</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="其它常用命令"><a href="#其它常用命令" class="headerlink" title="###其它常用命令"></a>###其它常用命令</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">clear   --清屏</div><div class="line">curl -l xxx   -- 访问url  ”-l“代表跟着跳转到页面，有需要加</div><div class="line">star   --用GUI(图形界面)打开某个文件</div></pre></td></tr></table></figure>
+<h2 id="使用技巧"><a href="#使用技巧" class="headerlink" title="###使用技巧"></a>###使用技巧</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">!!    --使用上一次命令</div><div class="line">xxx; yyy    --一句话执行两个命令</div><div class="line">xxx&amp;&amp; yyy  --同上</div></pre></td></tr></table></figure>
+<h2 id="更多命令"><a href="#更多命令" class="headerlink" title="###更多命令"></a>###更多命令</h2><ul>
+<li>在mac里：<code>man ls</code></li>
+<li>在windows里：<code>ls --help</code></li>
+</ul>
+<h2 id="注意事项"><a href="#注意事项" class="headerlink" title="###注意事项"></a>###注意事项</h2><p>1.不要漏打任何一个字符，包括空格<br>2.windows用户最好在~目录下玩儿<br>3.熟能生巧<br>4.作者是一个命令行初学者，以上如果有不正确的地方，欢迎留言纠错。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;由于我是windows操作系统，所以我用git bash来写命令。bash是一个命令处理器，用户可以在上面直接输入命令来执行各种任务。了解&lt;a href=&quot;https://zh.wikipedia.org/wiki/bash&quot; target=&quot;_blank&quot; rel=&quot;ex
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>从 URL 输入到页面展现发生了什么</title>
