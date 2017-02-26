@@ -76,6 +76,8 @@
 
 
 
+  
+
 
   <link rel="alternate" href="/atom.xml" title="chiang's Blog" type="application/atom+xml" />
 
@@ -111,7 +113,7 @@ Vim the Six Billion Dollar editorBetter, Stronger, Faster
 
 存活
 感">
-<meta property="og:updated_time" content="2017-02-26T12:25:38.059Z">
+<meta property="og:updated_time" content="2017-02-26T12:28:26.747Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="据说是人类史上最好的文本编辑器——VIM">
 <meta name="twitter:description" content="作为一个VIM初学者，vim给我的感觉就是命令多而且活，比bash还要难掌握。正所谓”工欲善其事，必先利其器“，且学习vim也是后期工程化的需要，所以它是必须跨过的大山，不会用命令的程序员不是好程序员。经过基础和进阶的学习我做了一些总结。
@@ -360,9 +362,9 @@ Vim the Six Billion Dollar editorBetter, Stronger, Faster
 <li>使用VIM的超能力 :)</li>
 </ul>
 </blockquote>
-<p>###启动vim</p>
-<p>在命令行窗口输入：<br><code>vim</code> 进入vim<br><code>vim xxx</code> 打开vim并创建名为xxx的文件</p>
-<h2 id="退出vim方式"><a href="#退出vim方式" class="headerlink" title="###退出vim方式"></a>###退出vim方式</h2><ul>
+<h3 id="启动vim"><a href="#启动vim" class="headerlink" title="启动vim"></a>启动vim</h3><p>在命令行窗口输入：<br><code>vim</code> 进入vim<br><code>vim xxx</code> 打开vim并创建名为xxx的文件</p>
+<h3 id="退出vim方式"><a href="#退出vim方式" class="headerlink" title="退出vim方式"></a>退出vim方式</h3><hr>
+<ul>
 <li><p>在插入模式下，先按ESE到normal模式：</p>
 <ul>
 <li><code>：wq</code>保存退出</li>
@@ -375,13 +377,17 @@ Vim the Six Billion Dollar editorBetter, Stronger, Faster
 <li><code>X</code>仅仅保存</li>
 <li><code>ZZ</code> 不需要输入：直接保存退出</li>
 </ul>
-<h2 id="vim的模式"><a href="#vim的模式" class="headerlink" title="###vim的模式"></a>###vim的模式</h2><ul>
+<h3 id="vim的模式"><a href="#vim的模式" class="headerlink" title="vim的模式"></a>vim的模式</h3><hr>
+<ul>
 <li>输入<code>i</code>进入插入模式</li>
 <li>按<code>ESE</code>退出当前模式，进入normal模式</li>
 </ul>
-<h2 id="移动命令"><a href="#移动命令" class="headerlink" title="###移动命令"></a>###移动命令</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">H J K L   --左、下、上、右</div><div class="line">G    --跳转到最后一行</div><div class="line">50G --移动到50行</div><div class="line">gg   --跳转到第一行</div><div class="line">w    --跳转到下一个单词开头</div><div class="line">e     --下一个单词结尾</div><div class="line">0     --数字0，到行头</div><div class="line">$     --到行尾</div><div class="line">^      --到第一个不是blank字符的位置（所谓blank就是指tab、空格、换行、回车等）</div><div class="line">g     --到本行最后一个不是blank字符的位置</div></pre></td></tr></table></figure>
-<h2 id="编辑命令"><a href="#编辑命令" class="headerlink" title="###编辑命令"></a>###编辑命令</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">i    --在光标前插入文本</div><div class="line">A   --在一行后添加文本</div><div class="line">dw  --从光标处删除到下一个单词起始处，不包括第一个字符</div><div class="line">de   --从当前位置到单词末尾，包括最后一个字符</div><div class="line">dd   --删除本行，在功能键前加数字可删除多行，例如：5dd 删除5行</div><div class="line">r      --替换当前位置的字符</div><div class="line">O     --在本行的上方插入新的一行</div><div class="line">o      --小写字母，在本行下方插入新的一行</div><div class="line">a       --在光标所在位置之后插入文本</div><div class="line">A       --在光标所在行位置之后插入文本</div><div class="line">y        --复制</div><div class="line">p        --粘贴，可搭配数字使用，例如3p表示粘贴文本3次</div></pre></td></tr></table></figure>
-<h2 id="开挂命令"><a href="#开挂命令" class="headerlink" title="###开挂命令"></a>###开挂命令</h2><ul>
+<h3 id="移动命令"><a href="#移动命令" class="headerlink" title="移动命令"></a>移动命令</h3><hr>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">H J K L   --左、下、上、右</div><div class="line">G    --跳转到最后一行</div><div class="line">50G --移动到50行</div><div class="line">gg   --跳转到第一行</div><div class="line">w    --跳转到下一个单词开头</div><div class="line">e     --下一个单词结尾</div><div class="line">0     --数字0，到行头</div><div class="line">$     --到行尾</div><div class="line">^      --到第一个不是blank字符的位置（所谓blank就是指tab、空格、换行、回车等）</div><div class="line">g     --到本行最后一个不是blank字符的位置</div></pre></td></tr></table></figure>
+<h3 id="编辑命令"><a href="#编辑命令" class="headerlink" title="编辑命令"></a>编辑命令</h3><hr>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">i    --在光标前插入文本</div><div class="line">A   --在一行后添加文本</div><div class="line">dw  --从光标处删除到下一个单词起始处，不包括第一个字符</div><div class="line">de   --从当前位置到单词末尾，包括最后一个字符</div><div class="line">dd   --删除本行，在功能键前加数字可删除多行，例如：5dd 删除5行</div><div class="line">r      --替换当前位置的字符</div><div class="line">O     --在本行的上方插入新的一行</div><div class="line">o      --小写字母，在本行下方插入新的一行</div><div class="line">a       --在光标所在位置之后插入文本</div><div class="line">A       --在光标所在行位置之后插入文本</div><div class="line">y        --复制</div><div class="line">p        --粘贴，可搭配数字使用，例如3p表示粘贴文本3次</div></pre></td></tr></table></figure>
+<h3 id="开挂命令"><a href="#开挂命令" class="headerlink" title="开挂命令"></a>开挂命令</h3><hr>
+<ul>
 <li><code>100iabc[ESE]</code>  界面会打出100个abc  </li>
 <li><code>.</code>可重复上一次命令，例如100”abc“.表示重复再打100个abc</li>
 <li><code>3.</code> 重复三次abc</li>
@@ -399,7 +405,8 @@ Vim the Six Billion Dollar editorBetter, Stronger, Faster
 <li><code>:split file或:new file</code> 用新窗口打开文件</li>
 <li><code>split</code>打开的窗口都是横向的，使用<code>vsplit</code>可以纵向打开窗口。</li>
 </ul>
-<h2 id="结束语"><a href="#结束语" class="headerlink" title="###结束语"></a>###结束语</h2><ul>
+<h3 id="结束语"><a href="#结束语" class="headerlink" title="结束语"></a>结束语</h3><hr>
+<ul>
 <li>注意大小写。有些命令是在normal下输入的，我们把它叫做功能键。有一些是在插入模式下输入的，所有带<code>:</code>的命令都在插入模式输入。注意区别。</li>
 <li>上面是我学习的一些常用的命令，其中有些命令是可以搭配组合的，需要自己去尝试，可以在shell输入<code>vim tutor</code>，学习官方的文档。vim和bash一样都需要熟能生巧，学完这两个以后可以开始做很多事了。下一篇再来说说，我用它们做了一些什么有意思的事儿。</li>
 <li>以上如果有什么错误，欢迎留言。</li>
@@ -560,7 +567,7 @@ Vim the Six Billion Dollar editorBetter, Stronger, Faster
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#退出vim方式"><span class="nav-number">1.</span> <span class="nav-text">###退出vim方式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vim的模式"><span class="nav-number">2.</span> <span class="nav-text">###vim的模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#移动命令"><span class="nav-number">3.</span> <span class="nav-text">###移动命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#编辑命令"><span class="nav-number">4.</span> <span class="nav-text">###编辑命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#开挂命令"><span class="nav-number">5.</span> <span class="nav-text">###开挂命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#结束语"><span class="nav-number">6.</span> <span class="nav-text">###结束语</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#启动vim"><span class="nav-number">1.</span> <span class="nav-text">启动vim</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#退出vim方式"><span class="nav-number">2.</span> <span class="nav-text">退出vim方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#vim的模式"><span class="nav-number">3.</span> <span class="nav-text">vim的模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#移动命令"><span class="nav-number">4.</span> <span class="nav-text">移动命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#编辑命令"><span class="nav-number">5.</span> <span class="nav-text">编辑命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#开挂命令"><span class="nav-number">6.</span> <span class="nav-text">开挂命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#结束语"><span class="nav-number">7.</span> <span class="nav-text">结束语</span></a></li></ol></div>
             
 
           </div>
