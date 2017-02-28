@@ -252,6 +252,187 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/28/如何自定义简单命令（一）—alias、function/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="maxchiang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/touxiang.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="chiang's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/02/28/如何自定义简单命令（一）—alias、function/" itemprop="url">
+                  如何自定义简单命令（一）—alias、function
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-02-28T16:15:46+08:00">
+                2017-02-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/02/28/如何自定义简单命令（一）—alias、function/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/28/如何自定义简单命令（一）—alias、function/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2017/02/28/如何自定义简单命令（一）—alias、function/" class="leancloud_visitors" data-flag-title="如何自定义简单命令（一）—alias、function">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>学完bash和vim，可以开始一些命令新玩法了。<br>function不用介绍了，就是函数。<br>[<a href="https://zh.wikipedia.org/wiki/Alias" target="_blank" rel="external">alias</a>]是许多命令行界面的命令。也就是用自定义字符串替换指定命令的功能，通常用于简写系统命令。</p>
+<p>####alias</p>
+<hr>
+<ol>
+<li>我们可以在<code>~/.bashrc</code>里添加alias</li>
+</ol>
+<ul>
+<li><code>~/.bashrc</code>是什么呢<br> 就是一个文件，bash 会在启动时运行 ~/.bashrc 里面的内容，我们可以自定义bashrc文件内容。</li>
+<li><code>rc</code> 是配置文件的意思</li>
+</ul>
+<ol>
+<li>添加alias<br>在任何一个编辑器里打开bashrc文件，这里我们用vim，在vim里给bashrc加入一行<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">alias xxx=<span class="string">'yyy'</span>   ---xxx随便定义一个名字，yyy是xxx对应的字符串，命令</div><div class="line">例如:</div><div class="line">alias f=<span class="string">'find f. -name'</span>   --在当前目录里查找名字叫xxx的文件</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>写好后，f就被赋予了特殊的意义，保存退出重启</p>
+<ol>
+<li>运行</li>
+</ol>
+<p>在bash里输入<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">source ~/.bashrc          --或者xxx  ‘yyy’ </div><div class="line">f 'chiang'                --例子</div></pre></td></tr></table></figure></p>
+<h2 id="function"><a href="#function" class="headerlink" title="####function"></a>####function</h2><ol>
+<li><p>同样在vim里编辑~/.bashrc</p>
+</li>
+<li><p>自定义function</p>
+</li>
+</ol>
+<ul>
+<li>举例<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">fd () &#123;</div><div class="line">local d          --声明一个变量</div><div class="line">d=$(find . -type d -name $<span class="number">1</span>)    -- 查找name为$<span class="number">1</span>的目录，然后返回这个目录给d。$<span class="number">1</span>是第一个参数，这是bash语法规定的，没有为社么</div><div class="line">cd <span class="string">"$d"</span>             --进入这个目录</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<ol>
+<li>在bash里输入<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">source ~/.bashrc          ---或者xxx（函数名）  ‘yyy（参数）’ </div><div class="line">fd 'chiang'                       --例子</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="小结"><a href="#小结" class="headerlink" title="####小结"></a>####小结</h2><ul>
+<li>bash语法很奇怪，需要强行记忆</li>
+<li>alias和function可以把一些复杂的命令变得简单，学会a它们可以更加高效的使用命令行</li>
+</ul>
+<h2 id="分享一个z文件"><a href="#分享一个z文件" class="headerlink" title="####分享一个z文件"></a>####分享一个z文件</h2><p><code>z</code>文件就是一个会记住曾经到过的目录的文件</p>
+<ol>
+<li>下载<a href="https://github.com/rupa/z" target="_blank" rel="external">[z.sh]</a>，放到一个不会删除的目录下</li>
+<li>在 ~/.bashrc 里面加入z.sh的路径<br>source /path/to/z.sh   </li>
+<li>运行 source ~/.bashrc</li>
+</ol>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/26/据说是人类史上最好的文本编辑器——VIM/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1007,7 +1188,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -1015,6 +1196,13 @@
 
           
 
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
           
 
         </nav>

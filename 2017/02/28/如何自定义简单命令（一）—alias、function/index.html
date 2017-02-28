@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="学习心得," />
 
 
 
@@ -89,30 +89,37 @@
 
 
 
-<meta name="description" content="由于我是windows操作系统，所以我用git bash来写命令。bash是一个命令处理器，用户可以在上面直接输入命令来执行各种任务。了解[bash]是什么之前先需要了解[Unix shell]
+<meta name="description" content="学完bash和vim，可以开始一些命令新玩法了。function不用介绍了，就是函数。[alias]是许多命令行界面的命令。也就是用自定义字符串替换指定命令的功能，通常用于简写系统命令。
+####alias
 
-了解基本概念
-/ 代表整个硬盘，叫根目录(这是 Windows 特有的)
-~ 用户目录  -在windows系统中，表示/Users/administrator/目录  -在 Linux 系统，表示 /">
+
+我们可以在~/.bashrc里添加alias
+
+
+~/.bashrc是什么呢 就是一个文件，bash 会在启动时运行 ~/.bashrc 里面的内容，我们可以自定义bashrc文件内容。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="拥抱命令行">
-<meta property="og:url" content="http://yoursite.com/2017/02/26/拥抱命令行/index.html">
+<meta property="og:title" content="如何自定义简单命令（一）—alias、function">
+<meta property="og:url" content="http://yoursite.com/2017/02/28/如何自定义简单命令（一）—alias、function/index.html">
 <meta property="og:site_name" content="chiang's Blog">
-<meta property="og:description" content="由于我是windows操作系统，所以我用git bash来写命令。bash是一个命令处理器，用户可以在上面直接输入命令来执行各种任务。了解[bash]是什么之前先需要了解[Unix shell]
+<meta property="og:description" content="学完bash和vim，可以开始一些命令新玩法了。function不用介绍了，就是函数。[alias]是许多命令行界面的命令。也就是用自定义字符串替换指定命令的功能，通常用于简写系统命令。
+####alias
 
-了解基本概念
-/ 代表整个硬盘，叫根目录(这是 Windows 特有的)
-~ 用户目录  -在windows系统中，表示/Users/administrator/目录  -在 Linux 系统，表示 /">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/4740192-c8393ee9706f70bd.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2017-02-26T12:19:30.865Z">
+
+我们可以在~/.bashrc里添加alias
+
+
+~/.bashrc是什么呢 就是一个文件，bash 会在启动时运行 ~/.bashrc 里面的内容，我们可以自定义bashrc文件内容。">
+<meta property="og:updated_time" content="2017-02-28T08:17:45.872Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="拥抱命令行">
-<meta name="twitter:description" content="由于我是windows操作系统，所以我用git bash来写命令。bash是一个命令处理器，用户可以在上面直接输入命令来执行各种任务。了解[bash]是什么之前先需要了解[Unix shell]
+<meta name="twitter:title" content="如何自定义简单命令（一）—alias、function">
+<meta name="twitter:description" content="学完bash和vim，可以开始一些命令新玩法了。function不用介绍了，就是函数。[alias]是许多命令行界面的命令。也就是用自定义字符串替换指定命令的功能，通常用于简写系统命令。
+####alias
 
-了解基本概念
-/ 代表整个硬盘，叫根目录(这是 Windows 特有的)
-~ 用户目录  -在windows系统中，表示/Users/administrator/目录  -在 Linux 系统，表示 /">
-<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/4740192-c8393ee9706f70bd.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+
+我们可以在~/.bashrc里添加alias
+
+
+~/.bashrc是什么呢 就是一个文件，bash 会在启动时运行 ~/.bashrc 里面的内容，我们可以自定义bashrc文件内容。">
 
 
 
@@ -140,13 +147,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/02/26/拥抱命令行/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/02/28/如何自定义简单命令（一）—alias、function/"/>
 
 
 
 
 
-  <title> 拥抱命令行 | chiang's Blog </title>
+  <title> 如何自定义简单命令（一）—alias、function | chiang's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -265,7 +272,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/26/拥抱命令行/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/28/如何自定义简单命令（一）—alias、function/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="maxchiang">
@@ -286,7 +293,7 @@
             
             
               
-                拥抱命令行
+                如何自定义简单命令（一）—alias、function
               
             
           </h1>
@@ -301,8 +308,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-02-26T20:14:51+08:00">
-                2017-02-26
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-02-28T16:15:46+08:00">
+                2017-02-28
               </time>
             
 
@@ -320,8 +327,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/02/26/拥抱命令行/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/26/拥抱命令行/" itemprop="commentCount"></span>
+                <a href="/2017/02/28/如何自定义简单命令（一）—alias、function/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/28/如何自定义简单命令（一）—alias、function/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -329,7 +336,7 @@
 
           
           
-             <span id="/2017/02/26/拥抱命令行/" class="leancloud_visitors" data-flag-title="拥抱命令行">
+             <span id="/2017/02/28/如何自定义简单命令（一）—alias、function/" class="leancloud_visitors" data-flag-title="如何自定义简单命令（一）—alias、function">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -358,64 +365,49 @@
       
 
       
-        <p>由于我是windows操作系统，所以我用git bash来写命令。bash是一个命令处理器，用户可以在上面直接输入命令来执行各种任务。了解<a href="https://zh.wikipedia.org/wiki/bash" target="_blank" rel="external">[bash]</a>是什么之前先需要了解<a href="https://zh.wikipedia.org/wiki/Unix_shell" target="_blank" rel="external">[Unix shell]</a></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/4740192-c8393ee9706f70bd.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="git bash 界面.PNG"></p>
-<h3 id="了解基本概念"><a href="#了解基本概念" class="headerlink" title="了解基本概念"></a>了解基本概念</h3><ul>
-<li><code>/</code> 代表整个硬盘，叫根目录(<em>这是 Windows 特有的</em>)</li>
-<li><code>~</code> 用户目录<br>  -在windows系统中，表示<code>/Users/administrator/</code>目录<br>  -在 Linux 系统，表示 <code>/home/administrator/</code> 目录 </li>
-<li><code>./</code>代表当前目录</li>
-<li><code>..</code>代表父目录(上一级目录)   </li>
-<li>目录、路径、节点<br> 1.目录就是文件夹<br> 2.路径</li>
-<li>绝对路径，以/开头，详细的描述了一个文件具体的位置。例如：<code>/c/Users/demos</code></li>
-<li><p>相对路径，不以/开头，是一个相对值。 例如：<code>..C/users</code></p>
-<p>3.节点=文件 or 目录</p>
-</li>
-</ul>
-<h3 id="命令的格式"><a href="#命令的格式" class="headerlink" title="命令的格式"></a>命令的格式</h3><hr>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ 命令 -选项缩写 -选项 参数</div><div class="line">结果</div></pre></td></tr></table></figure>
-<p><code>命令缩写的规则是省略A、E、I、O、U五个元音字母，留下两到三个字母（有时例外）</code></p>
-<h3 id="目录与文件的基本操作"><a href="#目录与文件的基本操作" class="headerlink" title="目录与文件的基本操作"></a>目录与文件的基本操作</h3><hr>
+        <p>学完bash和vim，可以开始一些命令新玩法了。<br>function不用介绍了，就是函数。<br>[<a href="https://zh.wikipedia.org/wiki/Alias" target="_blank" rel="external">alias</a>]是许多命令行界面的命令。也就是用自定义字符串替换指定命令的功能，通常用于简写系统命令。</p>
+<p>####alias</p>
+<hr>
 <ol>
-<li>创建目录<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">mkdir xxx(目录名）</div><div class="line">mkdir -p xxx（目录路径）   --一次性创建多层次目录，有需要加</div></pre></td></tr></table></figure>
+<li>我们可以在<code>~/.bashrc</code>里添加alias</li>
+</ol>
+<ul>
+<li><code>~/.bashrc</code>是什么呢<br> 就是一个文件，bash 会在启动时运行 ~/.bashrc 里面的内容，我们可以自定义bashrc文件内容。</li>
+<li><code>rc</code> 是配置文件的意思</li>
+</ul>
+<ol>
+<li>添加alias<br>在任何一个编辑器里打开bashrc文件，这里我们用vim，在vim里给bashrc加入一行<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">alias xxx=<span class="string">'yyy'</span>   ---xxx随便定义一个名字，yyy是xxx对应的字符串，命令</div><div class="line">例如:</div><div class="line">alias f=<span class="string">'find f. -name'</span>   --在当前目录里查找名字叫xxx的文件</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>写好后，f就被赋予了特殊的意义，保存退出重启</p>
+<ol>
+<li>运行</li>
+</ol>
+<p>在bash里输入<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">source ~/.bashrc          --或者xxx  ‘yyy’ </div><div class="line">f 'chiang'                --例子</div></pre></td></tr></table></figure></p>
+<h2 id="function"><a href="#function" class="headerlink" title="####function"></a>####function</h2><ol>
+<li><p>同样在vim里编辑~/.bashrc</p>
+</li>
+<li><p>自定义function</p>
 </li>
 </ol>
 <ul>
-<li><p>创建文件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">touch xxx    --文件名</div></pre></td></tr></table></figure>
-</li>
-<li><p>删除</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">rm -r    --递归删除，将指定目录下的所有文件与子目录一并处理</div><div class="line">rm -f   --强制删除</div><div class="line">rm -rf   --强制逐个删除一个目录</div><div class="line">rm -i    --删除已有目录前先询问用户</div></pre></td></tr></table></figure>
-</li>
-<li><p>移动/重命名</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">mv 源 目标  --格式</div><div class="line">mv demos/helloworld ./   --把demos里的helloworld移动到当前目录</div></pre></td></tr></table></figure>
+<li>举例<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">fd () &#123;</div><div class="line">local d          --声明一个变量</div><div class="line">d=$(find . -type d -name $<span class="number">1</span>)    -- 查找name为$<span class="number">1</span>的目录，然后返回这个目录给d。$<span class="number">1</span>是第一个参数，这是bash语法规定的，没有为社么</div><div class="line">cd <span class="string">"$d"</span>             --进入这个目录</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 </li>
 </ul>
-<p><code>如果当前目录无目标文件则执行重命名，反之，执行移动。</code></p>
-<ul>
-<li><p>显示当前目录下的文件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">ls -l   --用长一点的形式显示</div><div class="line">ls -a   --显示所有文件</div><div class="line">ls -la   --用长一点的形式显示所有文件</div></pre></td></tr></table></figure>
+<ol>
+<li>在bash里输入<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">source ~/.bashrc          ---或者xxx（函数名）  ‘yyy（参数）’ </div><div class="line">fd 'chiang'                       --例子</div></pre></td></tr></table></figure>
 </li>
-<li><p>拷贝</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cp xxx(文件) xxx（路径）  --这种只拷贝单个文件</div><div class="line">cp -r    --递归拷贝文件夹，包括下一级的子文件夹以此类推</div></pre></td></tr></table></figure>
-</li>
-<li><p>查看当前位置</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pwd</div></pre></td></tr></table></figure>
-</li>
-<li><p>进入目录</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cd xxx(路径)</div></pre></td></tr></table></figure>
-</li>
+</ol>
+<h2 id="小结"><a href="#小结" class="headerlink" title="####小结"></a>####小结</h2><ul>
+<li>bash语法很奇怪，需要强行记忆</li>
+<li>alias和function可以把一些复杂的命令变得简单，学会a它们可以更加高效的使用命令行</li>
 </ul>
-<h3 id="其它常用命令"><a href="#其它常用命令" class="headerlink" title="其它常用命令"></a>其它常用命令</h3><hr>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">clear   --清屏</div><div class="line">curl -l xxx   -- 访问url  ”-l“代表跟着跳转到页面，有需要加</div><div class="line">star   --用GUI(图形界面)打开某个文件</div></pre></td></tr></table></figure>
-<h3 id="使用技巧"><a href="#使用技巧" class="headerlink" title="使用技巧"></a>使用技巧</h3><hr>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">!!    --使用上一次命令</div><div class="line">xxx; yyy    --一句话执行两个命令</div><div class="line">xxx&amp;&amp; yyy  --同上</div></pre></td></tr></table></figure>
-<h3 id="更多命令"><a href="#更多命令" class="headerlink" title="更多命令"></a>更多命令</h3><hr>
-<ul>
-<li>在mac里：<code>man ls</code></li>
-<li>在windows里：<code>ls --help</code></li>
-</ul>
-<h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><hr>
-<p>1.不要漏打任何一个字符，包括空格<br>2.windows用户最好在~目录下玩儿<br>3.熟能生巧s<br>4.作者是一个命令行初学者，以上如果有不正确的地方，欢迎留言纠错。</p>
+<h2 id="分享一个z文件"><a href="#分享一个z文件" class="headerlink" title="####分享一个z文件"></a>####分享一个z文件</h2><p><code>z</code>文件就是一个会记住曾经到过的目录的文件</p>
+<ol>
+<li>下载<a href="https://github.com/rupa/z" target="_blank" rel="external">[z.sh]</a>，放到一个不会删除的目录下</li>
+<li>在 ~/.bashrc 里面加入z.sh的路径<br>source /path/to/z.sh   </li>
+<li>运行 source ~/.bashrc</li>
+</ol>
 
       
     </div>
@@ -437,6 +429,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/学习心得/" rel="tag"># 学习心得</a>
+          
+        </div>
+      
 
       
         
@@ -446,8 +444,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/02/26/从 URL 输入到页面展现发生了什么/" rel="next" title="从 URL 输入到页面展现发生了什么">
-                <i class="fa fa-chevron-left"></i> 从 URL 输入到页面展现发生了什么
+              <a href="/2017/02/26/据说是人类史上最好的文本编辑器——VIM/" rel="next" title="据说是人类史上最好的文本编辑器——VIM">
+                <i class="fa fa-chevron-left"></i> 据说是人类史上最好的文本编辑器——VIM
               </a>
             
           </div>
@@ -455,10 +453,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/02/26/据说是人类史上最好的文本编辑器——VIM/" rel="prev" title="据说是人类史上最好的文本编辑器——VIM">
-                据说是人类史上最好的文本编辑器——VIM <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -603,7 +597,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#了解基本概念"><span class="nav-number">1.</span> <span class="nav-text">了解基本概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#命令的格式"><span class="nav-number">2.</span> <span class="nav-text">命令的格式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#目录与文件的基本操作"><span class="nav-number">3.</span> <span class="nav-text">目录与文件的基本操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#其它常用命令"><span class="nav-number">4.</span> <span class="nav-text">其它常用命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用技巧"><span class="nav-number">5.</span> <span class="nav-text">使用技巧</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#更多命令"><span class="nav-number">6.</span> <span class="nav-text">更多命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#注意事项"><span class="nav-number">7.</span> <span class="nav-text">注意事项</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#function"><span class="nav-number">1.</span> <span class="nav-text">####function</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#小结"><span class="nav-number">2.</span> <span class="nav-text">####小结</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分享一个z文件"><span class="nav-number">3.</span> <span class="nav-text">####分享一个z文件</span></a></li></ol></div>
             
 
           </div>
