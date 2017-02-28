@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-02-28T08:17:45.872Z</updated>
+  <updated>2017-02-28T08:21:57.447Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,11 +20,10 @@
     <link href="http://yoursite.com/2017/02/28/%E5%A6%82%E4%BD%95%E8%87%AA%E5%AE%9A%E4%B9%89%E7%AE%80%E5%8D%95%E5%91%BD%E4%BB%A4%EF%BC%88%E4%B8%80%EF%BC%89%E2%80%94alias%E3%80%81function/"/>
     <id>http://yoursite.com/2017/02/28/如何自定义简单命令（一）—alias、function/</id>
     <published>2017-02-28T08:15:46.000Z</published>
-    <updated>2017-02-28T08:17:45.872Z</updated>
+    <updated>2017-02-28T08:21:57.447Z</updated>
     
     <content type="html"><![CDATA[<p>学完bash和vim，可以开始一些命令新玩法了。<br>function不用介绍了，就是函数。<br>[<a href="https://zh.wikipedia.org/wiki/Alias" target="_blank" rel="external">alias</a>]是许多命令行界面的命令。也就是用自定义字符串替换指定命令的功能，通常用于简写系统命令。</p>
-<p>####alias</p>
-<hr>
+<h4 id="alias"><a href="#alias" class="headerlink" title="alias"></a>alias</h4><hr>
 <ol>
 <li>我们可以在<code>~/.bashrc</code>里添加alias</li>
 </ol>
@@ -41,7 +40,8 @@
 <li>运行</li>
 </ol>
 <p>在bash里输入<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">source ~/.bashrc          --或者xxx  ‘yyy’ </div><div class="line">f 'chiang'                --例子</div></pre></td></tr></table></figure></p>
-<h2 id="function"><a href="#function" class="headerlink" title="####function"></a>####function</h2><ol>
+<h4 id="function"><a href="#function" class="headerlink" title="function"></a>function</h4><hr>
+<ol>
 <li><p>同样在vim里编辑~/.bashrc</p>
 </li>
 <li><p>自定义function</p>
@@ -55,11 +55,13 @@
 <li>在bash里输入<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">source ~/.bashrc          ---或者xxx（函数名）  ‘yyy（参数）’ </div><div class="line">fd 'chiang'                       --例子</div></pre></td></tr></table></figure>
 </li>
 </ol>
-<h2 id="小结"><a href="#小结" class="headerlink" title="####小结"></a>####小结</h2><ul>
+<h4 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h4><hr>
+<ul>
 <li>bash语法很奇怪，需要强行记忆</li>
 <li>alias和function可以把一些复杂的命令变得简单，学会a它们可以更加高效的使用命令行</li>
 </ul>
-<h2 id="分享一个z文件"><a href="#分享一个z文件" class="headerlink" title="####分享一个z文件"></a>####分享一个z文件</h2><p><code>z</code>文件就是一个会记住曾经到过的目录的文件</p>
+<h4 id="分享一个z文件"><a href="#分享一个z文件" class="headerlink" title="分享一个z文件"></a>分享一个z文件</h4><hr>
+<p><code>z</code>文件就是一个会记住曾经到过的目录的文件,有了它可以直接使用z. xxx(文件名)，到达你去过的目录</p>
 <ol>
 <li>下载<a href="https://github.com/rupa/z" target="_blank" rel="external">[z.sh]</a>，放到一个不会删除的目录下</li>
 <li>在 ~/.bashrc 里面加入z.sh的路径<br>source /path/to/z.sh   </li>
